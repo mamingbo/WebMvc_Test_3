@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace WebPlat_Test_3.Mod
 {
-    public class ModuleButton_Mod
+    public class ModuleBtn_Mod
     {
 
         /// <summary>

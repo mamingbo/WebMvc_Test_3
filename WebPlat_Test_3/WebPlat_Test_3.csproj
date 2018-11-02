@@ -1499,7 +1499,8 @@
     </Compile>
     <Compile Include="Mod\ERevertCode.cs" />
     <Compile Include="Mod\Model_Mod.cs" />
-    <Compile Include="Mod\ModuleButton_Mod.cs" />
+    <Compile Include="Mod\ModuleBtn_Mod.cs" />
+    <Compile Include="Mod\ModuleColumn_Mod.cs" />
     <Compile Include="Mod\RevertPar_Mod.cs" />
     <Compile Include="Mod\UserInfo_Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

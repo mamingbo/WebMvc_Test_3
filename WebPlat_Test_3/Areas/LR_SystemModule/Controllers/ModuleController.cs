@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebPlat_Test_3.Util;
 using WebPlat_Test_3.Bll.LR_SystemModule;
+using WebPlat_Test_3.Mod;
 
 
 namespace WebPlat_Test_3.Areas.LR_SystemModule.Controllers
@@ -38,43 +39,43 @@ namespace WebPlat_Test_3.Areas.LR_SystemModule.Controllers
         /// </summary>
         /// <param name="url">页面地址</param>
         /// <returns></returns>
-        //[HttpGet]
-        //[AjaxYZ]
-        //public ActionResult GetAuthorizeButtonColumnList(string url)
-        //{
-        //    Dictionary<string, string> dicButton = new Dictionary<string, string>();
-        //    Dictionary<string, string> dicColumn = new Dictionary<string, string>();
+        [HttpGet]
+        [AjaxYZ]
+        public ActionResult GetAuthorizeButtonColumnList(string url)
+        {
+            Dictionary<string, string> dicButton = new Dictionary<string, string>();
+            Dictionary<string, string> dicColumn = new Dictionary<string, string>();
 
-        //    ModuleEntity moduleEntity = moduleIBLL.GetModuleByUrl(url);
+            Model_Mod moduleEntity = ModBll.GetModuleByUrl(url);
 
-        //    if (moduleEntity != null)
-        //    {
-        //        List<ModuleButtonEntity> buttonList = moduleIBLL.GetButtonList(moduleEntity.F_ModuleId);
-        //        foreach (var item in buttonList)
-        //        {
-        //            if (!dicButton.ContainsKey(item.F_EnCode))
-        //            {
-        //                dicButton.Add(item.F_EnCode, item.F_FullName);
-        //            }
-        //        }
-        //        List<ModuleColumnEntity> columnList = moduleIBLL.GetColumnList(moduleEntity.F_ModuleId);
-        //        foreach (var item in columnList)
-        //        {
-        //            if (!dicColumn.ContainsKey(item.F_EnCode))
-        //            {
-        //                dicColumn.Add(item.F_EnCode.ToLower(), item.F_FullName);
-        //            }
-        //        }
-        //    }
+            if (moduleEntity != null)
+            {
+                List<ModuleBtn_Mod> buttonList = ModBll.GetButtonList(moduleEntity.F_ModuleId);
+                foreach (var item in buttonList)
+                {
+                    if (!dicButton.ContainsKey(item.F_EnCode))
+                    {
+                        dicButton.Add(item.F_EnCode, item.F_FullName);
+                    }
+                }
+                List<ModuleColumn_Mod> columnList = ModBll.GetColumnList(moduleEntity.F_ModuleId);
+                foreach (var item in columnList)
+                {
+                    if (!dicColumn.ContainsKey(item.F_EnCode))
+                    {
+                        dicColumn.Add(item.F_EnCode.ToLower(), item.F_FullName);
+                    }
+                }
+            }
 
-        //    var jsonData = new
-        //    {
-        //        module = moduleEntity,
-        //        btns = dicButton,
-        //        cols = dicColumn
-        //    };
+            var jsonData = new
+            {
+                module = moduleEntity,
+                btns = dicButton,
+                cols = dicColumn
+            };
 
-        //    return this.Success(jsonData);
-        //}
+            return this.Success(jsonData);
+        }
     }
 }
