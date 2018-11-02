@@ -53,6 +53,7 @@ namespace WebPlat_Test_3.Controllers
             var data = LoginUserInfo.Get();
             data.password = null;
             data.secretkey = null;
+
             return Success(data);
         }
     }

@@ -8,6 +8,8 @@ namespace WebPlat_Test_3.Mod
     public class UserInfo_Mod
     {
 
+        #region 用户信息
+
         /// <summary>
         /// 用户主键
         /// </summary>		
@@ -88,5 +90,33 @@ namespace WebPlat_Test_3.Mod
         /// 是否是超级管理员
         /// </summary>
         public bool isSystem { get; set; }
+        #endregion
+
+        #region 扩展信息
+        /// <summary>
+        /// 应用Id
+        /// </summary>
+        public string appId { get; set; }
+        /// <summary>
+        /// 登录时间
+        /// </summary>
+        public DateTime logTime { get; set; }
+        /// <summary>
+        /// 登录IP地址
+        /// </summary>
+        public string iPAddress { get; set; }
+        /// <summary>
+        /// 浏览器名称
+        /// </summary>
+        public string browser { get; set; }
+        /// <summary>
+        /// 登录者标识
+        /// </summary>
+        public string loginMark { get; set; }
+        /// <summary>
+        /// 票据信息
+        /// </summary>
+        public string token { get; set; }
+        #endregion
     }
 }

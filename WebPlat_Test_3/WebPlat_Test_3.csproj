@@ -95,6 +95,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\LR_OrganizationModule\Views\Company\Form.js" />
+    <Content Include="Areas\LR_OrganizationModule\Views\Company\Index.js" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
     <Content Include="Content\bootstrap\bootstrap.min.js" />
@@ -1491,6 +1493,7 @@
     <Compile Include="Areas\LR_OrganizationModule\LR_OrganizationModuleAreaRegistration.cs" />
     <Compile Include="Areas\LR_SystemModule\Controllers\ModuleController.cs" />
     <Compile Include="Areas\LR_SystemModule\LR_SystemModuleAreaRegistration.cs" />
+    <Compile Include="Bll\LR_OrganizationModule\Company_Bll.cs" />
     <Compile Include="Bll\LR_SystemModule\Model_Bll.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -1498,6 +1501,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mod\ERevertCode.cs" />
+    <Compile Include="Mod\LR_OrganizationModule\Company_Mod.cs" />
     <Compile Include="Mod\Model_Mod.cs" />
     <Compile Include="Mod\ModuleBtn_Mod.cs" />
     <Compile Include="Mod\ModuleColumn_Mod.cs" />
@@ -1512,6 +1516,7 @@
     <Compile Include="Util\LoginUserInfo.cs" />
     <Compile Include="Util\MvcControllerBase.cs" />
     <Compile Include="Util\NetUtil.cs" />
+    <Compile Include="Util\WebHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -1543,8 +1548,10 @@
     <Content Include="Views\Home\AdminDesktopTemp.cshtml" />
     <Content Include="Areas\LR_SystemModule\Views\web.config" />
     <Content Include="Areas\LR_OrganizationModule\Views\web.config" />
-    <Content Include="Areas\LR_OrganizationModule\Views\Company\Index.cshtml" />
     <Content Include="Views\Shared\_Index.cshtml" />
+    <Content Include="Areas\LR_OrganizationModule\Views\Company\Index.cshtml" />
+    <Content Include="Views\Shared\_Form.cshtml" />
+    <Content Include="Areas\LR_OrganizationModule\Views\Company\Form.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

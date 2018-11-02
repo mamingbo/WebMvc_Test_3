@@ -63,5 +63,17 @@ namespace WebPlat_Test_3
             return new MvcHtmlString(content.ToString());
         }
 
+        /// <summary>
+        /// 设置当前页面地址
+        /// </summary>
+        /// <param name="htmlHelper"></param>
+        /// <returns></returns>
+        public static MvcHtmlString SetCurrentUrl(this HtmlHelper htmlHelper)
+        {
+            //  string currentUrl = (string)WebHelper.GetHttpItems("currentUrl");
+            string currentUrl = "/LR_OrganizationModule/Company/Index";
+            return new MvcHtmlString("<script>var lrCurrentUrl='" + currentUrl + "';var lrModuleButtonList;var lrModuleColumnList;var lrModule;</script>");
+        }
+
     }
 }
