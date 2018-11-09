@@ -22,12 +22,16 @@ namespace WebPlat_Test_3.Util
             UserInfo_Mod info = new UserInfo_Mod();
             info.account = "System";
             info.appId = "Learun_ADMS_6.1_PC";
-            info.browser = "InternetExplorer 11.0";
+            //info.browser = "InternetExplorer 11.0";
+            info.browser = "Chrome 60.0";
             info.companyId = "";
             info.departmentId = "";
             info.enCode = "System";
             info.gender = 1;
             info.headIcon = "/Resource/PhotoFile/System.jpg";
+            //info.headIcon = "~/ Content / images / iframebg.png";
+
+            
             info.iPAddress = "192.168.56.1";
             info.isSystem = true;
             info.logTime =DateTime.Now;

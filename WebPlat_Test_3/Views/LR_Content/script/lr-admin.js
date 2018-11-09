@@ -48,7 +48,7 @@ var loaddfimg;
                 page.userInit();
                 // 初始页面特例
                 bootstrap($, learun);
-                //$.imServer.init();
+                $.imServer.init();
                 if ($('body').hasClass('IE') || $('body').hasClass('InternetExplorer')) {
                     $('#lr_loadbg').fadeOut();
                 }

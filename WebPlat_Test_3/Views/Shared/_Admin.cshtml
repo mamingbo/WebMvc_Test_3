@@ -26,7 +26,8 @@
     "/Views/LR_Content/plugin/im/lr-im.css"
     )
 
-    <script src="~/Content/pace/pace.min.js"></script>
+    @*<script src="~/Content/pace/pace.min.js"></script>*@
+    <script src="~/Content/pace/pace.js"></script>
     <script src="~/Content/jquery/jquery-1.10.2.min.js"></script>
 
     <!--[if lt IE 9]>
@@ -35,10 +36,12 @@
     <![endif]-->
 </head>
 <body class="@WebPlat_Test_3.Util.NetUtil.Browser lr-uitheme-default">
-    <div class="lr-loadbg" id="lr_loadbg"></div>
+
+    @*@WebPlat_Test_3.Util.NetUtil.Browser*@
+    @*<div class="lr-loadbg" id="lr_loadbg"></div>*@
     @RenderBody()
     <div class="lr-frame-top">
-        <a class="lr-logo-title"><i class="iconfont icon-logo"></i><span>.</span> 敏捷开发框架</a>
+        <a class="lr-logo-title">@*<i class="iconfont icon-logo"></i>*@<span>.</span> 天地人设备接入平台</a>
     </div>
     <div class="lr-frame-menu"><div class="lr-frame-menu-wrap" id="lr_frame_menu"></div></div>
     <div class="lr-frame-tabs">

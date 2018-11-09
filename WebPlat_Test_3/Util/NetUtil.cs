@@ -19,6 +19,8 @@ namespace WebPlat_Test_3.Util
                     return string.Empty;
                 var browser = HttpContext.Current.Request.Browser;
 
+                //string temp = "InternetExplorer 11.0";
+                //return temp;
                 string svvv = string.Format("{0} {1}", browser.Browser, browser.Version);
                 return string.Format("{0} {1}", browser.Browser, browser.Version);
             }
